@@ -28,7 +28,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
    '.banner-icons': {
       width: '13rem',
       borderRadius: '13px',
-      height: '10rem',
       [theme.breakpoints.down('xl')]: {
          width: '9rem',
       },

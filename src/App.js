@@ -13,7 +13,7 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 const App = () => {
 
   const context = useContext(StatesContext)
-  const { activeMenu, themeMenu, setThemeMenu, setActiveMenu , currentMode , currentColor} = context
+  const { activeMenu, themeMenu, setThemeMenu, setActiveMenu , currentMode , currentColor,setCurrentMode,setCurrentColor} = context
 
   const darkTheme = createTheme({
     palette: {
@@ -35,9 +35,13 @@ const App = () => {
       }
     })
 
+    const retriveMoode = localStorage.getItem('colorMode')
+    if (retriveMoode) setCurrentMode(retriveMoode)
+
+    const retriveTheme = localStorage.getItem('themeMode')
+    if (retriveTheme) setCurrentColor(retriveTheme)
 
   }, [])
-
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -79,7 +83,7 @@ const App = () => {
 
         </Box>
 
-        <Box marginLeft={activeMenu && { xs: '10rem', sm: '12rem', md: '13rem' }} width='100%'>
+        <Box marginLeft={activeMenu && { xs: '60%', sm: '12rem', md: '13rem' }} width='100%'>
 
           <Navbar />
           <Box>

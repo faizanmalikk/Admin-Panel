@@ -56,7 +56,7 @@ const Ecommerce = () => {
                 <Typography fontSize={'30px'} color={currentMode === 'dark' ? 'white' : 'black'}>{item.amount}</Typography>
                 <Typography fontSize={'20px'} color={item.pcColor}>{item.percentage}</Typography>
               </Box>
-              <Typography marginLeft={'1rem'} fontSize='25px' color='#757575'>{item.title}</Typography>
+              <Typography marginLeft={'1rem'} fontSize='25px' color='#757575' marginBottom='1rem'>{item.title}</Typography>
             </Box>
           ))}
         </Box>

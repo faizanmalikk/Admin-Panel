@@ -35,7 +35,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
             width: '12rem'
         },
         [theme.breakpoints.down('sm')]: {
-            width: '10rem'
+            width: '60%'
         },
     },
     '.monthly-con': {
